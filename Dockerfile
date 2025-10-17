@@ -17,7 +17,7 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
-COPY ./* /app/
+COPY . /app/
 COPY --from=builder /app/wheels /wheels
 
 RUN pip install --upgrade pip && \
